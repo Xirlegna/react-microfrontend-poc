@@ -2,7 +2,7 @@ import React from 'react';
 
 const Input = React.lazy(() => import('toolkit/Input'));
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <h4>Container</h4>
