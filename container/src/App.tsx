@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Input = React.lazy(() => import('toolkit/Input'));
+const TextField = React.lazy(() => import('toolkit/TextField'));
+const Button = React.lazy(() => import('toolkit/Button'));
 
 const App: React.FC = () => {
   return (
     <div>
       <h4>Container</h4>
-      <Input />
+      <TextField />
+      <Button>Save</Button>
     </div>
   );
 };

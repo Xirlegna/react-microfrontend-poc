@@ -20,6 +20,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.s[ac]ss?$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   resolve: {
@@ -30,7 +34,8 @@ module.exports = {
       name: 'toolkit',
       filename: 'remoteEntry.js',
       exposes: {
-        './Input': './src/components/Input/Input',
+        './Button': './src/components/Button/Button',
+        './TextField': './src/components/TextField/TextField',
       },
       shared: {
         ...deps,
